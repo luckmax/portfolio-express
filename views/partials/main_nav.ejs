@@ -1,0 +1,43 @@
+<!--navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Temesgen Teklebrhan</a>
+          <button class="btn-icon navbar-toggler" type="button" 
+          data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" 
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="drawer-body mb-2 md:mb-0">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <% if (title=="Home") { %>
+                      <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+                  <% } else { %>
+                    <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+                  <% } %>  
+                  </li>
+                <li class="nav-item">
+                  <% if (title=="About me") { %>
+                    <a class="nav-link active" aria-current="page" href="/aboutme"><i class="fa-solid fa-info"></i> About me</a>
+                  <% } else { %>
+                    <a class="nav-link" aria-current="page" href="/aboutme"><i class="fa-solid fa-info"></i> About me</a>
+                  <% } %>
+                  </li>
+                <li class="nav-item">
+                  <% if (title=="Projects") { %>
+                    <a class="nav-link active" aria-current="page" href="/projects"> <i class="fa-brands fa-elementor"></i> Projects</a>
+                  <% } else { %>
+                    <a class="nav-link" aria-current="page" href="/projects"> <i class="fa-brands fa-elementor"></i> Projects</a>  
+                  <% } %>
+                  </li>
+                <li class="nav-item">
+                <% if (title=="Contact me") { %>  
+                  <a class="nav-link active" aria-current="page" href="/contactme"> <i class="fa-solid fa-phone"></i> Contact me</a>
+                <% } else { %>
+                  <a class="nav-link" aria-current="page" href="/contactme"> <i class="fa-solid fa-phone"></i> Contact me</a>
+                <% } %>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </nav>

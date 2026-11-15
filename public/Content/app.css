@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* Reused from my Assignment 1 CSS (full.css) and adjusted to work with Bootstrap.
+   Color scheme hexadecimal values:
+   #0B1F33  #1F4E79  #4F81BD  #D9E6F2  #F7F9FC */
+
+body {
+    background: linear-gradient(to bottom, #0B1F33 0%, #1F4E79 25%, #D9E6F2 55%, #F7F9FC 100%);
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    /* space so the fixed footer does not cover the page content */
+    padding-bottom: 110px;
+}
+
+/* White page area in the middle (the #wrapper from Assignment 1) */
+#wrapper {
+    background-color: #F7F9FC;
+    box-shadow: 0px 0px 20px #0B1F33;
+    border-radius: 12px;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+/* Page headings */
+#wrapper > h1 {
+    color: #0B1F33;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4F81BD;
+}
+
+/* Content boxes (same as my Assignment 1 sections) */
+section {
+    background: linear-gradient(to right, #F7F9FC 0%, #D9E6F2 100%);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #4F81BD;
+    box-shadow: 5px 5px 8px #888888;
+    transition: transform 1s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+section h2 {
+    color: #1F4E79;
+}
+
+/* Home page introduction (angled gradient) */
+.hero {
+    background: linear-gradient(120deg, #0B1F33 0%, #1F4E79 100%);
+    color: white;
+    border-left: 6px solid #4F81BD;
+}
+
+.hero h2 {
+    color: #D9E6F2;
+}
+
+/* Profile photos with a caption */
+.profile-photo {
+    width: 280px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: #F7F9FC;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 5px 5px 8px #888888;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-photo figcaption {
+    color: #1F4E79;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+video {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    background-color: #0B1F33;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #888888;
+}
+
+/* Contact form styling from Assignment 1 */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 12px;
+    border: 2px solid #D9E6F2;
+    border-radius: 8px;
+    background-color: white;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4F81BD;
+}
+
+/* Submit, Reset and link buttons */
+input[type="submit"],
+input[type="reset"],
+.my-button {
+    background-color: #1F4E79;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.my-button:hover {
+    background-color: #4F81BD;
+    color: white;
+}
+
+/* Footer GitHub and LinkedIn links */
+footer a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
