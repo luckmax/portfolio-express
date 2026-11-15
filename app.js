@@ -18,6 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// node_modules is also static so Bootstrap and Font Awesome can be linked
+// as /bootstrap/... and /@fortawesome/... without typing /node_modules
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
