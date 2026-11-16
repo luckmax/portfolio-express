@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('partials/header.ejs') %>
+<%- include('partials/main_nav.ejs') %>
+
+<main id="wrapper" class="container">
+  <!-- Home page introduction -->
+  <section class="hero">
+    <div class="row align-items-center">
+      <div class="col-md-5 mb-3">
+        <figure class="profile-photo">
+          <img src="/Assets/images/profile.png" alt="Portrait of Temesgen Teklebrhan">
+          <figcaption>Temesgen Teklebrhan</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-7">
+        <h1>Hi, I'm Temesgen.</h1>
+        <h2 class="h4"><i class="fa-solid fa-shield-halved"></i> Networking and IT Security Student</h2>
+        <p>
+          I'm a second-year Networking and IT Security student at Ontario Tech University
+          with a strong interest in cybersecurity, networking, and protecting digital systems.
+        </p>
+        <p>
+          Through my studies, I've gained hands-on experience with Cisco Packet Tracer and I'm
+          currently developing an AI cybersecurity agents project. My goal is to gain experience
+          in government cybersecurity and eventually start my own cybersecurity company.
+        </p>
+        <a href="/aboutme" class="my-button"><i class="fa-solid fa-info"></i> Learn More About Me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer.ejs') %>
