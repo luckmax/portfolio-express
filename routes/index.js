@@ -14,4 +14,13 @@ router.get('/aboutme', function(req, res, next) {
   res.render('about', { title: 'About me' });
 });
 
+/* GET Projects page. */
+router.get('/projects', function(req, res, next) {
+  res.render('projects', { title: 'Projects' });
+});
+/* GET Contact me page. */
+router.get('/contactme', function(req, res, next) {
+  res.render('contact', { title: 'Contact me' });
+});
+
 module.exports = router;

@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/main_nav.ejs') %>
+
+<main id="wrapper" class="container">
+  <h1 class="mb-4"><%= title %></h1>
+
+  <div class="row">
+    <!-- Contact information -->
+    <div class="col-lg-4">
+      <section>
+        <h2 class="h4">Contact Information</h2>
+        <p>If you would like to contact me, you can use the form or email me directly.</p>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:temesgen.teklebrhan@ontariotechu.net">temesgen.teklebrhan@ontariotechu.net</a>
+        </p>
+      </section>
+    </div>
+
+    <!-- Contact form (same fields and validation as Assignment 1).
+         HTML5 attributes (required, type="email", pattern) check the fields,
+         then public/Script/app.js shows a thank-you message. -->
+    <div class="col-lg-8">
+      <section>
+        <h2 class="h4">Send Me a Message</h2>
+        <form id="contactForm" name="contactform">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Cell No.:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" placeholder="4165551234"
+                   title="Enter a 10-digit phone number without spaces or dashes" required>
+          </div>
+          <div class="mb-3">
+            <label for="comments" class="form-label">Comments:</label>
+            <textarea class="form-control" id="comments" name="comments" rows="6" required></textarea>
+          </div>
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </form>
+        <!-- app.js writes the thank-you message here -->
+        <p id="formMessage" class="mt-3"></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer.ejs') %>
