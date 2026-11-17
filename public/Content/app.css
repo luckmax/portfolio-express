@@ -13,6 +13,7 @@ html {
 body {
     background: linear-gradient(to bottom, #0B1F33 0%, #1F4E79 25%, #D9E6F2 55%, #F7F9FC 100%);
     font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size:18px;
     padding: 0px;
     margin: 0px;
 }
@@ -311,4 +312,9 @@ footer a {
 
 .social-links a:hover {
     background-color: #D9E6F2;
+}
+
+/* A little more space between lines so the bigger text is easy to read */
+p, li {
+    line-height: 1.7;
 }
