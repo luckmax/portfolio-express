@@ -1,44 +1,92 @@
 @charset "UTF-8";
 
-/* Reused from my Assignment 1 CSS (full.css) and adjusted to work with Bootstrap.
+/* My CSS from Assignment 1 (full.css), adjusted to work with Bootstrap.
    Color scheme hexadecimal values:
    #0B1F33  #1F4E79  #4F81BD  #D9E6F2  #F7F9FC */
 
 body {
     background: linear-gradient(to bottom, #0B1F33 0%, #1F4E79 25%, #D9E6F2 55%, #F7F9FC 100%);
     font-family: Verdana, Geneva, Arial, sans-serif;
-    /* space so the fixed footer does not cover the page content */
-    padding-bottom: 110px;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* White page area in the middle (the #wrapper from Assignment 1) */
+/* Bootstrap makes headings thinner, so set them back to bold like Assignment 1 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* Page area in the middle */
 #wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #F7F9FC;
     box-shadow: 0px 0px 20px #0B1F33;
-    border-radius: 12px;
-    margin-top: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    border-radius: 0px 0px 12px 12px;
     overflow: hidden;
 }
 
-/* Logo in the navbar, on a light circle so it shows on the dark background */
-.logo {
-    height: 40px;
-    width: 40px;
+/* Header with the gradient and centered logo */
+header {
+    background: linear-gradient(45deg, #0B1F33 0%, #1F4E79 65%, #4F81BD 100%);
+    color: white;
+    padding-top: 10px;
+}
+
+.logo-heading {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Logo turned white so it shows on the dark header */
+.logo-heading img {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transform: translateY(20px);
+}
+
+/* Navigation links styled as buttons (Bootstrap navbar) */
+header .navbar {
+    padding-bottom: 20px;
+}
+
+header .navbar-nav .nav-link {
+    color: white;
+    background-color: #1F4E79;
+    padding: 10px 15px;
+    margin-left: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 1s, transform 1s;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: white;
+    background-color: #4F81BD;
+    transform: scale(1.05);
+}
+
+/* Highlight the current page */
+header .navbar-nav .nav-link.active {
     background-color: #F7F9FC;
-    border-radius: 50%;
-    padding: 3px;
+    color: #0B1F33;
+    border: 2px solid #4F81BD;
 }
 
 /* Page headings */
-#wrapper > h1 {
+main > h1,
+main > h2 {
     color: #0B1F33;
+    font-size: 28px;
     padding-bottom: 10px;
     border-bottom: 3px solid #4F81BD;
 }
 
-/* Content boxes (same as my Assignment 1 sections) */
+/* Content boxes */
 section {
     background: linear-gradient(to right, #F7F9FC 0%, #D9E6F2 100%);
     margin-bottom: 20px;
@@ -53,24 +101,89 @@ section:hover {
     transform: scale(1.02);
 }
 
-section h2 {
+section h3 {
     color: #1F4E79;
 }
 
-/* Home page introduction (angled gradient) */
+/* Stops content from wrapping around the floated About Me photo */
+.clear {
+    clear: both;
+}
+
+/* Home page introduction */
 .hero {
     background: linear-gradient(120deg, #0B1F33 0%, #1F4E79 100%);
     color: white;
-    border-left: 6px solid #4F81BD;
+    padding: 35px;
+}
+
+/* Keep the hero steady when hovering */
+section.hero:hover {
+    transform: none;
 }
 
 .hero h2 {
-    color: #D9E6F2;
+    color: white;
+    font-size: 36px;
+    margin-top: 15px;
 }
 
-/* Profile photos with a caption */
+.hero h3 {
+    color: #D9E6F2;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+/* Photo on the right of the introduction */
+.hero-photo {
+    width: 250px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    background-color: #F7F9FC;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 5px 5px 10px #0B1F33;
+}
+
+.hero-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hero-photo figcaption {
+    color: #1F4E79;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+/* Learn More button */
+.hero-button {
+    display: inline-block;
+    background-color: #1F4E79;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background-color 1s;
+}
+
+.hero-button:hover {
+    background-color: #D9E6F2;
+    color: #0B1F33;
+}
+
+/* About Me profile photo */
 .profile-photo {
-    width: 280px;
+    width: 250px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -87,10 +200,29 @@ section h2 {
     border-radius: 10px;
 }
 
-.profile-photo figcaption {
-    color: #1F4E79;
-    padding-top: 10px;
-    font-weight: bold;
+/* About Me circular portrait on the right */
+.about-photo {
+    float: right;
+    width: 220px;
+    height: 220px;
+    margin: 0px 0px 15px 20px;
+    border: 5px solid #4F81BD;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+/* About Me introduction video section */
+.video-section {
+    text-align: center;
 }
 
 video {
@@ -102,7 +234,7 @@ video {
     box-shadow: 5px 5px 8px #888888;
 }
 
-/* Contact form styling from Assignment 1 */
+/* Contact form styling */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -120,10 +252,9 @@ textarea:focus {
     border-color: #4F81BD;
 }
 
-/* Submit, Reset and link buttons */
+/* Submit and Reset buttons */
 input[type="submit"],
-input[type="reset"],
-.my-button {
+input[type="reset"] {
     background-color: #1F4E79;
     color: white;
     padding: 12px 20px;
@@ -131,20 +262,41 @@ input[type="reset"],
     border-radius: 8px;
     margin-right: 10px;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
 }
 
 input[type="submit"]:hover,
-input[type="reset"]:hover,
-.my-button:hover {
+input[type="reset"]:hover {
     background-color: #4F81BD;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(-45deg, #0B1F33 0%, #1F4E79 100%);
     color: white;
 }
 
-/* Footer GitHub and LinkedIn links */
 footer a {
     color: white;
-    margin-left: 15px;
+}
+
+/* Footer social media icons in white circles */
+.social-links {
+    margin: 20px 0px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0px 8px;
+    background-color: #F7F9FC;
+    border-radius: 50%;
+    color: #1F4E79;
+    font-size: 26px;
     text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: #D9E6F2;
 }
