@@ -49,8 +49,11 @@ header {
 
 /* Logo turned white so it shows on the dark header */
 .logo-heading img {
-    width: 100px;
-    height: auto;
+    width: 115px;
+    height: 115px;
+    padding: 12px;
+    border: 5px solid white;
+    border-radius: 50%;
     filter: brightness(0) invert(1);
     transform: translateY(20px);
 }
