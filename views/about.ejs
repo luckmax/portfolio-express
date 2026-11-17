@@ -1,39 +1,32 @@
 <%- include('partials/header.ejs') %>
 <%- include('partials/main_nav.ejs') %>
 
-<main id="wrapper" class="container">
-  <h1 class="mb-4"><%= title %></h1>
+<main class="container-fluid py-4">
+  <h2>About Me</h2>
 
-  <!-- Background section with profile photo -->
+  <!-- Background section with circular profile photo on the right -->
   <section>
-    <div class="row align-items-center">
-      <div class="col-md-4 mb-3">
-        <figure class="profile-photo">
-          <img src="/Assets/images/about-photo.jpeg" alt="Portrait of Temesgen Teklebrhan">
-        </figure>
-      </div>
-      <div class="col-md-8">
-        <h2 class="h4">My Background</h2>
-        <p>
-          My name is Temesgen Teklebrhan, and I am a second year Networking and IT Security student
-          at Ontario Tech University. I have a strong interest in technology, cybersecurity, and
-          understanding how computer networks work and how to protect them from security threats.
-        </p>
-        <p>
-          Through my studies and personal projects, I have gained experience with networking and
-          security tools like Cisco Packet Tracer and Kali Linux, and I have continued developing
-          my skills in IT security.
-        </p>
-      </div>
-    </div>
+    <figure class="about-photo">
+      <img src="/Assets/images/about-photo.jpeg" alt="Portrait of Temesgen Teklebrhan">
+    </figure>
+    <h3>My Background</h3>
+    <p>
+      My name is Temesgen Teklebrhan, and I am a second year Networking and IT Security student at
+      Ontario Tech University. I have a strong interest in technology, cybersecurity, and understanding
+      how computer networks work and how to protect them from security threats.
+    </p>
+    <p>
+      Through my studies and personal projects, I have gained experience with networking and security
+      tools like Cisco Packet Tracer and Kali Linux, and I have continued developing my skills in IT security.
+    </p>
+    <div class="clear"></div>
   </section>
 
-  <!-- Introduction video (HTML5 native video with controls and a poster image) -->
-  <section>
-    <h2 class="h4">My Introduction Video</h2>
+  <!-- Introduction video section -->
+  <section class="video-section">
+    <h3>My Introduction Video</h3>
     <p>
-      Watch my short introduction to learn more about who I am, my interests, and my
-      cybersecurity goals.
+      Watch my short introduction to learn more about who I am, my interests, and my cybersecurity goals.
     </p>
     <video controls poster="/Assets/images/about-photo.jpeg">
       <source src="/Assets/videos/intro.mp4" type="video/mp4">
@@ -41,37 +34,31 @@
     </video>
   </section>
 
-  <div class="row">
-    <div class="col-md-6">
-      <section>
-        <h2 class="h4"><i class="fa-solid fa-briefcase"></i> Experience and Skills</h2>
-        <p>
-          I have experience in teamwork, customer service, technical work, construction, and
-          leadership. I have also worked with tools, wiring, lighting, sound systems, and digital
-          projection equipment. Through school, I am continuing to build my skills in networking,
-          cybersecurity, HTML, CSS, and other information technology areas.
-        </p>
-      </section>
-    </div>
-    <div class="col-md-6">
-      <section>
-        <h2 class="h4"><i class="fa-solid fa-certificate"></i> Certifications</h2>
-        <ul>
-          <li>WHMIS Safety Training</li>
-          <li>Worker Health and Safety Awareness</li>
-          <li>Working at Heights</li>
-          <li>Standard CPR and First Aid</li>
-        </ul>
-      </section>
-    </div>
-  </div>
+  <section>
+    <h3>Experience and Skills</h3>
+    <p>
+      I have experience in teamwork, customer service, technical work, construction, and leadership.
+      I have also worked with tools, wiring, lighting, sound systems, and digital projection equipment.
+      Through school, I am continuing to build my skills in networking, cybersecurity, HTML, CSS, and
+      other information technology areas.
+    </p>
+  </section>
 
   <section>
-    <h2 class="h4"><i class="fa-solid fa-bullseye"></i> Career Goals</h2>
+    <h3>Certifications</h3>
+    <ul>
+      <li>WHMIS Safety Training</li>
+      <li>Worker Health and Safety Awareness</li>
+      <li>Working at Heights</li>
+      <li>Standard CPR and First Aid</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Career Goals</h3>
     <p>
       My goal is to work in cybersecurity and gain experience in a government cybersecurity role.
-      In the future, I would like to use my knowledge and experience to start my own
-      cybersecurity company.
+      In the future, I would like to use my knowledge and experience to start my own cybersecurity company.
     </p>
   </section>
 </main>

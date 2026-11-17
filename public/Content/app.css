@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* Always show the scrollbar so the page (and logo) does not shift
+   sideways between short and long pages */
+html {
+    overflow-y: scroll;
+}
+
 /* My CSS from Assignment 1 (full.css), adjusted to work with Bootstrap.
    Color scheme hexadecimal values:
    #0B1F33  #1F4E79  #4F81BD  #D9E6F2  #F7F9FC */
@@ -103,6 +109,12 @@ section:hover {
 
 section h3 {
     color: #1F4E79;
+}
+
+/* Projects page boxes: same height in each row */
+.project-box {
+    height: 100%;
+    margin-bottom: 0px;
 }
 
 /* Stops content from wrapping around the floated About Me photo */

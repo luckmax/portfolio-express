@@ -1,19 +1,13 @@
 <%- include('partials/header.ejs') %>
 <%- include('partials/main_nav.ejs') %>
 
-<main class="container mt-4">
-  <!-- Home page introduction -->
+<main class="container-fluid py-4">
+  <!-- Home page introduction: text on the left, photo on the right -->
   <section class="hero">
     <div class="row align-items-center">
-      <div class="col-md-4 mb-3">
-        <figure class="profile-photo">
-          <img src="/Assets/images/profile.png" alt="Portrait of Temesgen Teklebrhan">
-          <figcaption>Temesgen Teklebrhan</figcaption>
-        </figure>
-      </div>
-      <div class="col-md-8">
-        <h1>Hi, I'm Temesgen.</h1>
-        <h2 class="h4"><i class="fa-solid fa-shield-halved"></i> Networking and IT Security Student</h2>
+      <div class="col-lg-8">
+        <h2>Hi, I'm Temesgen.</h2>
+        <h3>Networking and IT Security Student</h3>
         <p>
           I'm a second-year Networking and IT Security student at Ontario Tech University
           with a strong interest in cybersecurity, networking, and protecting digital systems.
@@ -23,35 +17,18 @@
           currently developing an AI cybersecurity agents project. My goal is to gain experience
           in government cybersecurity and eventually start my own cybersecurity company.
         </p>
-        <a href="/aboutme" class="my-button"><i class="fa-solid fa-info"></i> Learn More About Me</a>
+        <p>
+          <a href="/aboutme" class="hero-button">Learn More About Me</a>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <figure class="hero-photo">
+          <img src="/Assets/images/profile.png" alt="Portrait of Temesgen Teklebrhan">
+          <figcaption>Temesgen Teklebrhan</figcaption>
+        </figure>
       </div>
     </div>
   </section>
-
-  <!-- Quick links to the other pages (Bootstrap grid: stacked on phones, 3 across on larger screens) -->
-  <div class="row">
-    <div class="col-md-4">
-      <section class="quick-link">
-        <h2 class="h5"><i class="fa-solid fa-user-shield"></i> About Me</h2>
-        <p>My background, certifications, career goals, and a short introduction video.</p>
-        <a href="/aboutme" class="my-button">Read More</a>
-      </section>
-    </div>
-    <div class="col-md-4">
-      <section class="quick-link">
-        <h2 class="h5"><i class="fa-solid fa-network-wired"></i> My Projects</h2>
-        <p>Networking, cybersecurity, and hands-on projects I have worked on.</p>
-        <a href="/projects" class="my-button">View Projects</a>
-      </section>
-    </div>
-    <div class="col-md-4">
-      <section class="quick-link">
-        <h2 class="h5"><i class="fa-solid fa-envelope"></i> Contact Me</h2>
-        <p>Have a question or an opportunity? Send me a message.</p>
-        <a href="/contactme" class="my-button">Get in Touch</a>
-      </section>
-    </div>
-  </div>
 </main>
 
 <%- include('partials/footer.ejs') %>
